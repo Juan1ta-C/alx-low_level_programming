@@ -1,9 +1,9 @@
-#inlclude "main.h"
+#include "main.h"
 /**
  * _strncpy - copy string
  * @dest: destination
  * @src: source
- * n: amount of bytes
+ * @n: amount of bytes
  * Return: pointer to dest
  */
 char *_strncpy(char *dest, char *src, int n)

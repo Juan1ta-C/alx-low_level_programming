@@ -1,17 +1,31 @@
-#include "list.h"
+	SECTION .data
 
-/**
-* free_list - frees a list
-* @head: head of the linked list.
-*/
-void free_list(list_t *head)
-{
-	list_t *current;
+msg:	db "Hello, Holberton", 0
 
-	while ((current = head) != NULL)
-	{
-		head = head->next;
-		free(current->str);
-		free(current);
-	}
-}
+fmt:	db "%s", 10, 0
+
+
+
+	SECTION .text
+
+	extern printf
+
+	global main
+
+main:
+
+	mov esi, msg
+
+	mov edi, fmt
+
+	mov eax, 0
+
+	call printf
+
+
+
+	mov eax, 0
+
+	ret
+
+
